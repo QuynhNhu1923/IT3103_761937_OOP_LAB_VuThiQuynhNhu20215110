@@ -12,6 +12,42 @@ public class Cart {
             System.out.println("The cart is almost full.");
         }
     }
+    // 2.1: Nạp chồng: Thêm một mảng DVD (DigitalVideoDisc [])
+//    public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
+//        for (DigitalVideoDisc disc : dvdList) {
+//            if (qtyOrdered < MAX_NUMBERS_ORDERED) {
+//                itemsOrdered[qtyOrdered] = disc;
+//                qtyOrdered++;
+//                System.out.println("The disc \"" + disc.getTitle() + "\" has been added.");
+//            } else {
+//                System.out.println("The cart is almost full. Cannot add: " + disc.getTitle());
+//                break; 
+//            }
+//        }
+//    }
+    // 2.1: Nạp chồng: Thêm số lượng tham số tùy ý (Varargs) 
+    	//cho phép gọi: cart.addDigitalVideoDisc(d1, d2, d3...);
+    public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+        for (DigitalVideoDisc disc : dvds) {
+            if (qtyOrdered < MAX_NUMBERS_ORDERED) {
+                itemsOrdered[qtyOrdered] = disc;
+                qtyOrdered++;
+                System.out.println("The disc \"" + disc.getTitle() + "\" has been added.");
+            } else {
+                System.out.println("The cart is almost full.");
+                break;
+            }
+        }
+    }
+    //2.2: Nạp chồng: Thêm chính xác 2 DVD
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        if (qtyOrdered + 1 < MAX_NUMBERS_ORDERED) {
+            addDigitalVideoDisc(dvd1);
+            addDigitalVideoDisc(dvd2);
+        } else {
+            System.out.println("The cart is almost full, cannot add both discs.");
+        }
+    }
     // Phương thức xóa DVD khỏi giỏ hàng
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         boolean found = false;
