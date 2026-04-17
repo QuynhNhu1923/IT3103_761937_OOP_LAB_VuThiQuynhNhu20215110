@@ -28,10 +28,12 @@ public class Aims {
         anOrder.addDigitalVideoDisc(dvd5, dvd6, dvd7); 
 
         // Hiển thị giỏ hàng sau khi thêm bằng các phương thức nạp chồng
-        System.out.println("\nCurrent Cart Content:");
-        anOrder.displayCart();
-        System.out.println("Total Cost: " + anOrder.totalCost());
-		
+//        System.out.println("\nCurrent Cart Content:");
+//        anOrder.displayCart();
+//        System.out.println("Total Cost: " + anOrder.totalCost());
+        System.out.println(dvd5.getId()); 
+        System.out.println(dvd6.getId()); 
+        System.out.println(dvd7.getId()); 
 //		//Create new dvd objects and add them to the cart
 //		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King","Animation","RogerAllers",87,19.95f);
 //		anOrder.addDigitalVideoDisc(dvd1);
