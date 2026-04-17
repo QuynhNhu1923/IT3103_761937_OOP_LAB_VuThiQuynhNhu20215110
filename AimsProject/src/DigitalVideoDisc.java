@@ -84,9 +84,15 @@ public class DigitalVideoDisc {
 	public void setCost(float cost) {
 		this.cost = cost;
 	}
+//	@Override
+//    public String toString() {
+//        return "Title: " + title + ", Cost: $" + cost;
+//    }
 	@Override
-    public String toString() {
-        return "Title: " + title + ", Cost: $" + cost;
-    }
+	public String toString() {
+	    return "DVD - " + this.getTitle() + " - " + this.getCategory() 
+	            + " - " + this.getDirector() + " - " + this.getLength() 
+	            + ": " + this.getCost() + " $";
+	}
 	
 }
