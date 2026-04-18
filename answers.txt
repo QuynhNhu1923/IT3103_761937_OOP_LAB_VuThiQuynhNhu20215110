@@ -1,0 +1,9 @@
+--- Question in 2:Working with method overloading ---
+So sánh giữa việc dùng tham số mảng (Array) và tham số biến đổi (Varargs). Bạn thích cách nào hơn?
+--Trả lời:
+So sánh:
+Mảng (Array): gọi hàm bắt buộc phải khởi tạo mảng trước khi truyền vào (ví dụ: new DigitalVideoDisc[] {dvd1, dvd2})
+Varargs (...): Cho phép truyền trực tiếp danh sách các đối tượng cách nhau bởi dấu phẩy hoặc truyền mảng đều được(Java tự động chuyển đổi các đối số rời rạc thành mảng bên trong hàm)
+=> Ưu tiên sử dụng Varargs vì:
+Giúp mã nguồn ngắn gọn, dễ đọc, không cần khởi tạo mảng thủ công
+Một phương thức Varargs có thể thay thế cho cả phương thức nhận 1 tham số, 2 tham số hoặc mảng tham số, giúp tránh lặp lại mã nguồn khi nạp chồng (overloading)
