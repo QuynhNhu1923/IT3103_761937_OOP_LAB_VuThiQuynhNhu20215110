@@ -1,3 +1,7 @@
+package hust.soict.dsai.test.store;
+import hust.soict.dsai.aims.store.Store;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
+
 public class StoreTest {
     public static void main(String[] args) {
         Store store = new Store();
@@ -6,13 +10,13 @@ public class StoreTest {
         DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars");
         DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin");
 
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
+        store.addMedia(dvd1);
+        store.addMedia(dvd2);
+        store.addMedia(dvd3);
 
-        store.removeDVD(dvd2);
+        store.removeMedia(dvd2);
 
         DigitalVideoDisc dvd4 = new DigitalVideoDisc("Avatar");
-        store.removeDVD(dvd4);
+        store.removeMedia(dvd4);
     }
 }
